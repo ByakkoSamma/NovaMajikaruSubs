@@ -1,1 +1,6 @@
-.header-menu { background-color: #ff0024 !important; }
+.header-menu {
+    background-color: #ff0024 !important;
+}
+#header-blog {
+    background: #FF00FF;
+}
