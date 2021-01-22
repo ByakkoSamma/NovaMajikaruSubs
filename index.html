@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#ticker-wrapper {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  margin: 100px auto;  
+}
 
+#ticker-title {
+  width: 200px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0px;
+  
+}
+
+#ticker-news {
+  width: 460px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0px;
+  
+}
+
+#news p {
+  /*float: right;*/
+  position: absolute;
+  width: 150%;
+  animation: example 10s linear infinite;
+  transform: translateX(100%);
+  text-align: center;
+}
+
+#ticker-wrapper #news {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: red;
+}
+
+@keyframes example {
+  0% {transform: translateX(100%);}
+  100% {transform: translateX(-100%);}
+}
+</style>
+</head>
+<body>
+
+<div id="ticker-wrapper">
+   <div id="ticker-title"><p>Últimas noticias</div>
+   <div id="ticker-news">
+       <div id="news">
+           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+       </div>
+   </div>
+   
+</div>
+
+</body>
+</html>
