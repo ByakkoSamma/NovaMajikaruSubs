@@ -1,7 +1,7 @@
 <?php
 $BOT_TOKEN = "1612205654:AAGg_E42alKxw672teF7ls4CH9zNdnwxExA";
 
-$website = "https://api.telegram.org/bot" . $BOT_TOKEN
+$website = "https://api.telegram.org/bot" . $BOT_TOKEN;
 $update = file_get_contents('php://input');
 $update = json_decode($update, true);
 
@@ -9,7 +9,7 @@ $chat_id = $update["message"]["from"]["id"];
 $message = $update["message"]["text"];
 
 if ( $message == "/help" ) {
-  SendMessage($chat_id, "Bobo o qué")
+  SendMessage($chat_id, "Bobo o qué");
 }
 
 function SendMessage($chat_id, $message) {
