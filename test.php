@@ -13,6 +13,6 @@ if ( $message == "/help" ) {
 }
 
 function SendMessage($chat_id, $message) {
-  $url = $GLOBALS[website] . "/sendMessage?chat_id=" . $chat_id . "&parse_mode=HTML&text=" . urlencode($message);
+  $url = $GLOBALS[$website] . "/sendMessage?chat_id=" . $chat_id . "&parse_mode=HTML&text=" . urlencode($message);
   file_get_contents( $url );
 }
