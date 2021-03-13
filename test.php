@@ -13,7 +13,7 @@ function SendMessage($chat_id, $message) {
   file_get_contents( $url );
 }
 
-if ( $message == "/help" ) {
+if ( $message == "help" ) {
   SendMessage($chat_id, "Bobo o qué");
 }
 
