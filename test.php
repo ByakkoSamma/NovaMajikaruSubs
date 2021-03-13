@@ -8,11 +8,13 @@ $update = json_decode($update, true);
 $chat_id = $update["message"]["from"]["id"];
 $message = $update["message"]["text"];
 
-if ( $message == "/help" ) {
-  SendMessage($chat_id, "Bobo o qué");
-}
-
 function SendMessage($chat_id, $message) {
   $url = $GLOBALS[$website] . "/sendMessage?chat_id=" . $chat_id . "&parse_mode=HTML&text=" . urlencode($message);
   file_get_contents( $url );
 }
+
+if ( $message == "/help" ) {
+  SendMessage($chat_id, "Bobo o qué");
+}
+
+?>
